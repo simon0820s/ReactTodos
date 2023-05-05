@@ -1,6 +1,6 @@
 const FiltersContainer = ({ children }) => {
     return (
-        <div className="flex items-center justify-between p-4 bg-gray-700 border-b border-solid border-gray-600">
+        <div className="flex items-center justify-between p-4 bg-gray-800 border-b border-solid border-gray-900">
             {children}
         </div>
     )
