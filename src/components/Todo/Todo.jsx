@@ -30,8 +30,8 @@ const Todo = ({ todo, handleSetComplete, handleDelete }) => {
             </div>
             <motion.div
             animate={{
-                scale: [1, 2,1],
-                rotate: [0,180,360],}}
+                scale: [1,2,1],
+                rotate: [0,360,360],}}
                 transition={{duration:1.5}}
             >
                 <AiFillDelete onClick={() => handleDelete(id)} className="h-5 w-5 cursor-pointer animate hover:scale-150 hover:text-red-600 transition-all duration-200 ease-in "/>
