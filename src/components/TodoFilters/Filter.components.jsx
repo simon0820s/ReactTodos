@@ -1,8 +1,15 @@
+import { motion } from "framer-motion";
+
 const FiltersContainer = ({ children }) => {
     return (
-        <div className="flex items-center justify-between p-4 bg-gray-800 border-b border-solid border-gray-900">
+        <motion.div
+         className="flex items-center justify-between p-4 bg-gray-800 border-b border-solid border-gray-900"
+         initial={{ opacity: 0, scale: 0.5 }}
+         animate={{ opacity: 1, scale: 1 }}
+         transition={{ duration:0.5}}
+         >
             {children}
-        </div>
+        </motion.div>
     )
 };
 

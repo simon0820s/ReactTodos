@@ -8,22 +8,7 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      title: 'Watch the next Marvel Movie',
-      completed: false,
-    },
-    {
-      id: 2,
-      title: 'Record the next Video',
-     completed: false,
-    },
-    {
-      id: 3,
-      title: 'Wash the dishes',
-      completed: false,
-    },
-    {
-      id: 4,
-      title: 'Study 2 hours',
+      title: 'Create a new task',
       completed: false,
     }
   ])
@@ -95,7 +80,7 @@ function App() {
   },[activeFilter, todos]);
 
   return (
-    <div className='bg-gray-900 min-h-screen font-inter h-full text-gray-100 flex items-center justify-center py-20 px-5'>
+    <div className='bg-gray-900 backdrop-blur-3xl backdrop:filter min-h-screen font-inter h-full text-gray-100 flex items-center justify-center py-20 px-5'>
       <div className='container flex flex-col max-w-xl'>
         <Title />
         <TodoInput addTodo={addTodo} />
