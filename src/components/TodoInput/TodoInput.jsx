@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { motion } from "framer-motion";
 
 const TodoInput = ({ addTodo }) => {
 
@@ -12,7 +13,11 @@ const TodoInput = ({ addTodo }) => {
     }
 
     return (
-        <div className="mt-6 relative">
+        <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+         className="mt-6 relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <span className="border border-gray-500 border-solid p-3 rounded-full"></span>
             </div>
@@ -24,7 +29,7 @@ const TodoInput = ({ addTodo }) => {
                 onKeyDown={(e) => handleAddTodo(e)}
                 placeholder="What's next..."
             />
-        </div>
+        </motion.div>
     )
 }
 
