@@ -11,7 +11,7 @@ const Todo = ({ todo, handleSetComplete, handleDelete }) => {
             className="flex items-center justify-between p-4 bg-gray-700 border-b border-solid border-gray-600 "
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay:0.2 }}
         >
             <div className="flex items-center">
                 {
