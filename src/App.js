@@ -13,6 +13,26 @@ function App() {
     }
   ])
 
+  useEffect(() => {
+    const storedTodos = localStorage.getItem('todos');
+    
+    if (storedTodos) {
+      setTodos(JSON.parse(storedTodos));
+    } else {
+      setTodos([
+        {
+          id: 1,
+          title: 'Create a new task',
+          completed: false,
+        }
+      ]);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
+
   const [activeFilter, setActiveFilter] = useState('all');
 
   const [filteredTodos, setFilteredTodos] = useState(todos);
